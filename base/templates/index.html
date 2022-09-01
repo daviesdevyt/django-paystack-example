@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Body
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="icon" href="static/xd.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Pay</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Test paystack payment</a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+        <h1 align='center'>Paystack test payment</h1>
+        <p align='center'>Please fill in fake details</p>
+        <form method="POST">
+            <div class="form-group">
+                <label for='firstname'>Full name</label>
+                <input type="text" class="form-control" id='firstname' name='firstname' placeholder="First Name" required/>
+            </div>
+            <div class="form-group">
+                <label for='email'>Email</label>
+                <input type="email" class="form-control" id='email' name='email' placeholder="Enter email address" required/>
+            </div>
+            <div class="form-group">
+                <label for='amount'>Amount</label>
+                <input type="number" class="form-control" id='amount' name='amount' placeholder="Amount" required/>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id='amount' name='amount' placeholder="Amount" required/>
+                <label for='amount'>I agree to I used fake details to fill this form</label>
+            </div>
+            <button type="submit" class='btn btn-primary'>Pay</button>
+        </form>
+        <br>
+    </div><br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+  </body>
 </html>
