@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="icon" href="static/xd.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script> 
+    <script src="{% static 'index.js' %}" defer></script> 
     <title>Pay</title>
   </head>
   <body>
@@ -26,7 +28,7 @@
     <div class="container">
         <h1 align='center'>Paystack test payment</h1>
         <p align='center'>Please fill in fake details</p>
-        <form method="POST">
+        <form method="POST" id="paymentForm">
             <div class="form-group">
                 <label for='firstname'>Full name</label>
                 <input type="text" class="form-control" id='firstname' name='firstname' placeholder="First Name" required/>
