@@ -126,3 +126,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 PAYSTACK_PUBLIC_KEY = config("PUBLIC_KEY")
+PAYSTACK_PRIVATE_KEY = config("PRIVATE_KEY")

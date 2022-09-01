@@ -1,3 +1,5 @@
+window.onload = function ()
+{
 const paymentForm = document.querySelector("#paymentForm");
 paymentForm.addEventListener("submit", payWithPaystack, false);
 
@@ -23,7 +25,7 @@ function payWithPaystack(e) {
         url: '/verify_transaction?reference='+ response.reference,
         method: 'get',
         success: function (response) {
-            console.log(response.data.status)
+            console.log(response)
           // the transaction status is in response.data.status
         }
       });
@@ -31,4 +33,4 @@ function payWithPaystack(e) {
   });
 
   handler.openIframe();
-}
+}}
